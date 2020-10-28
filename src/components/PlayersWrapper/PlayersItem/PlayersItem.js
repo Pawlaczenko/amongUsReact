@@ -8,13 +8,13 @@ function importAllImages(r) {
     return images;
 }
 
-const PlayerItem = ({ name, role, color }) => {
+const PlayerItem = ({ name, role, color, handleDelete }) => {
 
     const images = importAllImages(require.context('./../../../assets/images', false, /\.png/));
     const imageKey = `guy_${color}.png`;
 
     return (
-        <li className={styles.player}>
+        <li className={styles.player} onClick={handleDelete} id={color}>
             <p
                 className={`${styles.name} ${role ? styles.impostor : styles.crewmate}`}>
                 {name}

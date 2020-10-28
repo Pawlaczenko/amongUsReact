@@ -8,7 +8,7 @@ const PlayersWrapper = props => (
 
         <ul className={styles.wrapper}>
             {props.players.map(item => (
-                <PlayersItem key={item.color} {...item} />
+                <PlayersItem key={item.color} handleDelete={props.deleteFn} {...item} />
             ))}
         </ul>
     </>
