@@ -4,9 +4,9 @@ import PlayersItem from './PlayersItem/PlayersItem';
 
 const PlayersWrapper = props => (
     <>
-        <h2 className={styles.count}>Players: 2/10</h2>
+        <h2 className={styles.count}>Players: {props.players.length}/10</h2>
 
-        <ul>
+        <ul className={styles.wrapper}>
             {props.players.map(item => (
                 <PlayersItem key={item.color} {...item} />
             ))}

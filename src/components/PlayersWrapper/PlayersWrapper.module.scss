@@ -1,0 +1,20 @@
+.wrapper {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-rows: 190px;
+
+    background: url("./../../assets/images/back.jpg");
+    background-size: cover;
+    min-height: 100vh;
+
+    padding: 25px;
+}
+
+.count {
+    // display: flex;
+    // align-items: center;
+    margin-left: 50px;
+    // line-height: 0;
+    // height: 7vh;
+}

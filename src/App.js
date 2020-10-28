@@ -9,12 +9,27 @@ class App extends React.Component {
             {
                 name: 'Partek',
                 role: 0, //0-crewmate, 1-impostor
-                color: 'blue'
+                color: 'red'
             },
             {
                 name: 'Impostor',
                 role: 1, //0-crewmate, 1-impostor
                 color: 'lime'
+            },
+            {
+                name: 'Policja',
+                role: 1, //0-crewmate, 1-impostor
+                color: 'blue'
+            },
+            {
+                name: 'was',
+                role: 0, //0-crewmate, 1-impostor
+                color: 'brown'
+            },
+            {
+                name: 'konix',
+                role: 0, //0-crewmate, 1-impostor
+                color: 'cyan'
             },
         ]
     }
