@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PlayersWrapper from './components/PlayersWrapper/PlayersWrapper';
+import './index.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+    state = {
+        players: [
+            {
+                name: 'Partek',
+                role: 0, //0-crewmate, 1-impostor
+                color: 'blue'
+            },
+            {
+                name: 'Impostor',
+                role: 1, //0-crewmate, 1-impostor
+                color: 'lime'
+            },
+        ]
+    }
+
+    render() {
+        return (
+            <PlayersWrapper
+                players={this.state.players}
+            />
+        )
+    }
 }
 
 export default App;
