@@ -1,0 +1,45 @@
+.wrapper {
+    width: 35%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.add {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .select {
+        height: 50px;
+        font-size: 40px;
+        margin-left: 10px;
+    }
+}
+
+.label {
+    font-size: 25px;
+
+}
+
+.input {
+    border: 0;
+    border-bottom: 2px solid grey;
+    width: 65%;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.colors{
+    width: 100%;
+    padding: 10px 25px;
+    display: grid;
+    grid-template-columns: repeat(4,45px);
+    column-gap: 15px;
+    justify-content: center;
+}

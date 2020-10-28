@@ -1,4 +1,8 @@
 .wrapper {
+    flex: 1;
+}
+
+.list {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));

@@ -1,0 +1,43 @@
+.input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.control {
+    display:grid;
+  place-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 15%;
+    border: 0.1em solid black;
+    cursor: pointer;
+}
+
+.input + .control::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 25px 25px black;
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);    
+}
+
+.input:checked + .control::before {
+    transform: scale(1);
+}
+
+.red{background-color: #C41011;}
+.blue{background-color: #132FD5;}
+.green{background-color: #147F2F;}
+.yellow{background-color: #F9F457;}
+.pink{background-color: #EF52B9;}
+.orange{background-color: #EC7E07;}
+.purple{background-color: #6F30BD;}
+.black{background-color: #41444D;}
+.brown{background-color: #71451E;}
+.cyan{background-color: #39FCDE;}
+.lime{background-color: #51F139;}
+.white{background-color: #D8DFF1;}
+

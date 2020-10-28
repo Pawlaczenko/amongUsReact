@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayersWrapper from './components/PlayersWrapper/PlayersWrapper';
+import Form from './components/Form/Form';
 import './index.css';
 
 class App extends React.Component {
@@ -49,10 +50,13 @@ class App extends React.Component {
 
     render() {
         return (
-            <PlayersWrapper
-                players={this.state.players}
-                deleteFn={this.deletePlayer}
-            />
+            <>
+                <PlayersWrapper
+                    players={this.state.players}
+                    deleteFn={this.deletePlayer}
+                />
+                <Form />
+            </>
         )
     }
 }
