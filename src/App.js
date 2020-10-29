@@ -6,33 +6,7 @@ import './index.css';
 class App extends React.Component {
 
     state = {
-        players: [
-            {
-                name: 'Partek',
-                role: false, //false-crewmate, true-impostor
-                color: 'red'
-            },
-            {
-                name: 'Impostor',
-                role: true, //false-crewmate, true-impostor
-                color: 'lime'
-            },
-            {
-                name: 'Policja',
-                role: true, //false-crewmate, true-impostor
-                color: 'blue'
-            },
-            {
-                name: 'was',
-                role: false, //false-crewmate, true-impostor
-                color: 'brown'
-            },
-            {
-                name: 'konix',
-                role: false, //false-crewmate, true-impostor
-                color: 'cyan'
-            },
-        ]
+        players: []
     }
 
     deletePlayer = e => {
@@ -48,6 +22,32 @@ class App extends React.Component {
         });
     }
 
+    addPlayer = e => {
+        e.preventDefault();
+        if (this.state.players.length === 10) return;
+        console.log(e.target[0].value);
+        const newPlayer = {
+            name: e.target[1].value,
+            role: parseInt(e.target[0].value),
+            color: document.querySelector('input[name="color"]:checked').value
+        }
+
+        this.setState(prevState => ({
+            players: [...prevState.players, newPlayer]
+        }));
+
+        e.target.reset();
+    }
+
+    checkDisabled = () => {
+        const disabled = [];
+        this.state.players.map(e => {
+            disabled.push(e.color);
+        });
+
+        return disabled;
+    }
+
     render() {
         return (
             <>
@@ -55,7 +55,10 @@ class App extends React.Component {
                     players={this.state.players}
                     deleteFn={this.deletePlayer}
                 />
-                <Form />
+                <Form
+                    addFn={this.addPlayer}
+                    disabledColors={this.checkDisabled()}
+                />
             </>
         )
     }

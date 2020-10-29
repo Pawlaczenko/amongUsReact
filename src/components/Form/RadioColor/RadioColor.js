@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './RadioColor.module.scss';
 
-const RadioColor = ({ color }) => (
+const RadioColor = ({ color, isDisabled }) => (
     <label className={styles.label}>
         <span className={styles.wrapper}>
             <input
@@ -9,6 +9,8 @@ const RadioColor = ({ color }) => (
                 name="color"
                 value={color}
                 className={styles.input}
+                required
+                disabled={isDisabled}
             />
             <span className={`${styles.control} ${styles[color]}`}></span>
         </span>

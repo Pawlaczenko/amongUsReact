@@ -30,7 +30,7 @@ const PlayerItem = ({ name, role, color, handleDelete }) => {
 
 PlayerItem.propTypes = {
     name: PropTypes.string.isRequired,
-    role: PropTypes.bool.isRequired,
+    role: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired
 }
 
