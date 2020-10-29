@@ -15,7 +15,7 @@ const Form = ({ addFn, disabledColors }) => {
                     </select>
                 </label>
                 <label className={styles.label} htmlFor="name">Name</label>
-                <input className={styles.input} type="text" required></input>
+                <input className={styles.input} type="text" maxLength="8" required></input>
                 <label className={styles.label} htmlFor="color">Color</label>
                 <div className={styles.colors}>
                     {
